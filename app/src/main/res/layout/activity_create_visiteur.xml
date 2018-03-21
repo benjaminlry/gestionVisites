@@ -10,13 +10,13 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Créer un nouveau visiteur"
-        android:textSize="30sp"/>
+        android:text="Créer un nouveau Visiteur"
+        android:textSize="25sp"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nom"
+        android:text="Nom :"
         android:textSize="25sp"/>
 
     <EditText
@@ -28,7 +28,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Prénom"
+        android:text="Prénom :"
         android:textSize="25sp"/>
 
     <EditText

@@ -34,9 +34,6 @@ public class VisiteurAdapter extends ArrayAdapter<Visiteur> {
         ImageView imageView = (ImageView) listItemView.findViewById(R.id.imgViewVisiteur);
         imageView.setImageResource(R.drawable.avatar);
 
-        TextView idTextView = (TextView) listItemView.findViewById(R.id.tv_id_visiteur);
-        idTextView.setText(visiteurSelectionnee.getId());
-
         TextView nomTextView = (TextView) listItemView.findViewById(R.id.tv_nom_visiteur);
         nomTextView.setText(visiteurSelectionnee.getNom());
 

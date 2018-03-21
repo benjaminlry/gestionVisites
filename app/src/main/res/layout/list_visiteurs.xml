@@ -23,34 +23,53 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="horizontal">
 
-                <TextView
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/tv_id_visiteur"
-                    android:textColor="@color/colorBlack"
-                    android:textSize="20dp"
-                    android:layout_marginRight="5dp"
-                    android:text="Id : "/>
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="25dp"
+                        android:layout_marginRight="5dp"
+                        android:text="Nom : "/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_nom_visiteur"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="30dp"
+                        android:layout_marginRight="5dp"
+                        android:text=""/>
 
-                <TextView
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/tv_nom_visiteur"
-                    android:textColor="@color/colorBlack"
-                    android:textSize="20dp"
-                    android:layout_marginRight="5dp"
-                    android:text="Nom :"/>
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="25dp"
+                        android:layout_marginRight="5dp"
+                        android:text="Prenom :"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_prenom_visiteur"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="30dp"
+                        android:layout_marginRight="5dp"
+                        android:text=""/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/tv_prenom_visiteur"
-                    android:textColor="@color/colorBlack"
-                    android:textSize="20dp"
-                    android:layout_marginRight="5dp"
-                    android:text="Prenom : "/>
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

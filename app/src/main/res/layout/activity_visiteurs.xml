@@ -7,23 +7,29 @@
     android:orientation="vertical"
     tools:context="com.btssio.leroybenjamin.gsbexemple.MainActivity">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Liste des Visiteurs"
-        android:textSize="35sp"/>
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/btn_actualiseVisiteur"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:text="Actualiser" />
+        <Button
+            android:id="@+id/btn_actualiseVisiteur"
+            android:layout_width = "70dp"
+            android:layout_height= "70dp"
+            android:background="@drawable/actualiser" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Liste des Visiteurs"
+            android:textSize="30dp"/>
+    </LinearLayout>
 
     <Button
         android:id="@+id/btn_createVisiteur"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:text="Créer un visiteur" />
+        android:text="Créer un nouveau visiteur" />
 
     <ListView
         android:id="@+id/lv_visiteurs"

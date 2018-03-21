@@ -7,11 +7,63 @@
     android:orientation="vertical"
     tools:context="com.btssio.leroybenjamin.gsbexemple.Visiteur.DetailsVisiteurActivity">
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:id="@+id/imgViewVisiteur"
+            android:src="@drawable/avatar"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nom : "
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id="@+id/et_detailNom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="20sp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Prenom : "
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id="@+id/et_detailPrenom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="20sp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
     <Button
         android:id="@+id/btn_deleteVisiteur"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:text="Supprimer" />
+        android:text="Supprimer le visiteur" />
 
     <Button
         android:id="@+id/btn_updateVisiteur"
@@ -19,42 +71,6 @@
         android:layout_width="match_parent"
         android:text="Modifier" />
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Nom : "
-            android:textSize="20sp"/>
-
-        <EditText
-            android:id="@+id/et_detailNom"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textSize="20sp"/>
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Prenom : "
-            android:textSize="20sp"/>
-
-        <EditText
-            android:id="@+id/et_detailPrenom"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textSize="20sp"/>
-    </LinearLayout>
 
 </LinearLayout>
