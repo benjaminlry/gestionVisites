@@ -1,27 +1,26 @@
-/*package com.btssio.leroybenjamin.gsbexemple.Metier.visite;
+package com.btssio.leroybenjamin.gsbexemple.Metier.visite;
 
-
-import com.btssio.leroybenjamin.gsbexemple.Medecin.DetailsMedecinActivity;
 
 import java.io.Serializable;
 import java.text.DateFormat;
+import java.util.Date;
 import java.util.HashMap;
 
 public class Visite implements Serializable {
 
     private String id;
-    private DateFormat date;
+    private String date;
     private String motif;
     private String medecins_id;
     private String visiteurs_id;
 
 
-    public Visite(String unId, DateFormat uneDate, String unMotif, String unIdMedecin, String unIdVisiteur){
+    public Visite(String unId, String uneDate, String unMotif, String unMedecins_id, String unVisiteurs_id){
         this.id = unId;
         this.date = uneDate;
         this.motif = unMotif;
-        this.medecins_id = unIdMedecin;
-        this.visiteurs_id = unIdVisiteur;
+        this.medecins_id = unMedecins_id;
+        this.visiteurs_id = unVisiteurs_id;
     }
 
     public HashMap<String, String> getVisite(){
@@ -53,20 +52,35 @@ public class Visite implements Serializable {
         this.id = id;
     }
 
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
     public String getMotif() {
         return motif;
     }
 
-    public void setNom(String nom) {
-        this.nom = nom;
+    public void setMotif(String motif) {
+        this.motif = motif;
     }
 
-    public String getPrenom() {
-        return prenom;
+    public String getMedecinsId() {
+        return medecins_id;
     }
 
-    public void setPrenom(String prenom) {
-        this.prenom = prenom;
+    public void setMedecinsId(String medecins_id) {
+        this.medecins_id = medecins_id;
+    }
+
+    public String getVisiteursId() {
+        return visiteurs_id;
+    }
+
+    public void setVisiteursId(String visiteurs_id) {
+        this.visiteurs_id = visiteurs_id;
     }
 }
-*/

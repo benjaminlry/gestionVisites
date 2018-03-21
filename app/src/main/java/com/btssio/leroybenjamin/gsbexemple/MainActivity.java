@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.btssio.leroybenjamin.gsbexemple.Medecin.MedecinsActivity;
+import com.btssio.leroybenjamin.gsbexemple.Visite.VisitesActivity;
 import com.btssio.leroybenjamin.gsbexemple.Visiteur.VisiteursActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -33,6 +34,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MedecinsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        textViewVisites.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), VisitesActivity.class);
                 startActivity(intent);
             }
         });

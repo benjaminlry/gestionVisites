@@ -63,14 +63,22 @@
         android:id="@+id/btn_deleteVisiteur"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:text="Supprimer le visiteur" />
+        android:text="Supprimer le visite" />
 
     <Button
         android:id="@+id/btn_updateVisiteur"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:text="Modifier" />
+    <Button
+        android:id="@+id/btn_actualiseVisites"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Actualiser"/>
 
-
+        <ListView
+            android:id="@+id/lv_visites"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></ListView>
 
 </LinearLayout>

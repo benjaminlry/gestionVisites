@@ -75,7 +75,7 @@ public class VisiteursActivity extends Activity {
                 Visiteur monVisiteur;
                 monVisiteur = (Visiteur) adapterView.getItemAtPosition(i);
                 Intent intent = new Intent(VisiteursActivity.this, DetailsVisiteurActivity.class);
-                intent.putExtra("Visiteur", (Serializable)monVisiteur);
+                intent.putExtra("Visite", (Serializable)monVisiteur);
                 startActivity(intent);
             }
         });

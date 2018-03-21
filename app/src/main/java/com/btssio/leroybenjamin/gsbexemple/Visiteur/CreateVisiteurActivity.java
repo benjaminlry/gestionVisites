@@ -43,7 +43,7 @@ public class CreateVisiteurActivity extends AppCompatActivity {
                 StringRequest request = new StringRequest(Request.Method.POST, addVisiteurUrl, new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        Toast.makeText(CreateVisiteurActivity.this, "Nouveau Visiteur : " +
+                        Toast.makeText(CreateVisiteurActivity.this, "Nouveau Visite : " +
                                 editTextNom.getText().toString() + " " +
                                 editTextPrenom.getText().toString() +
                                 " a été créer", Toast.LENGTH_LONG).show();

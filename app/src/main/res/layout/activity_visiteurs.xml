@@ -29,13 +29,12 @@
         android:id="@+id/btn_createVisiteur"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:text="Créer un nouveau visiteur" />
+        android:text="Créer un nouveau visite" />
 
     <ListView
         android:id="@+id/lv_visiteurs"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
     </ListView>
 
 </LinearLayout>
