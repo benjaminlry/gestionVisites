@@ -1,6 +1,9 @@
 package com.btssio.leroybenjamin.gsbexemple.Metier.visite;
 
 
+import com.btssio.leroybenjamin.gsbexemple.Metier.medecin.Medecin;
+import com.btssio.leroybenjamin.gsbexemple.Metier.visiteur.Visiteur;
+
 import java.io.Serializable;
 import java.text.DateFormat;
 import java.util.Date;
@@ -13,6 +16,8 @@ public class Visite implements Serializable {
     private String motif;
     private String medecins_id;
     private String visiteurs_id;
+    private Medecin medecin;
+    private Visiteur visiteur;
 
 
     public Visite(String unId, String uneDate, String unMotif, String unMedecins_id, String unVisiteurs_id){

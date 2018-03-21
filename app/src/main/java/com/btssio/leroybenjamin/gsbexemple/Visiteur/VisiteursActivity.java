@@ -46,7 +46,7 @@ public class VisiteursActivity extends Activity {
             }
         });
 
-        Button buttonActualiseVisiteur = (Button) findViewById(R.id.btn_actualiseVisiteur);
+        final Button buttonActualiseVisiteur = (Button) findViewById(R.id.btn_actualiseVisiteur);
         buttonActualiseVisiteur.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,6 +66,15 @@ public class VisiteursActivity extends Activity {
                     }
                 });
                 VolleyHelper.getInstance(getApplicationContext()).addToRequestQueue(gsonRequest);
+            }
+        });
+
+        Button buttonRetourVisiteurs = (Button) findViewById(R.id.btn_returnVisiteurs);
+        buttonRetourVisiteurs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+                buttonActualiseVisiteur.callOnClick();
             }
         });
 

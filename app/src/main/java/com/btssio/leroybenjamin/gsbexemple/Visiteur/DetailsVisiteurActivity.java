@@ -41,7 +41,7 @@ public class DetailsVisiteurActivity extends AppCompatActivity {
     RequestQueue requestQueue;
     String removeVisiteurUrl = "http://192.168.210.9:82/cakephp/visiteurs/";
     String updateVisiteurUrl = "http://192.168.210.9:82/cakephp/visiteurs/edit/";
-    String visitesUrl = "http://192.168.210.9:82/cakephp/visites";
+    String visitesUrl = "http://192.168.210.9:82/cakephp/visites.json";
     ListView lvVisites;
     Button btnActualiseVisites;
 
@@ -130,12 +130,11 @@ public class DetailsVisiteurActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
         Button btnActualiseVisites = (Button) findViewById(R.id.btn_actualiseVisites);
         btnActualiseVisites.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final GsonRequest gsonRequest = new GsonRequest(visitesUrl, Visiteurs.class, null, new Response.Listener<Visites>() {
+                final GsonRequest gsonRequest = new GsonRequest(visitesUrl, Visites.class, null, new Response.Listener<Visites>() {
                     @Override
                     public void onResponse(Visites visites) {
                         ArrayList<Visite> liste = visites.getVisites();
