@@ -19,7 +19,6 @@ public class Visite implements Serializable {
     private Medecin medecin;
     private Visiteur visiteur;
 
-
     public Visite(String unId, String uneDate, String unMotif, String unMedecins_id, String unVisiteurs_id){
         this.id = unId;
         this.date = uneDate;
@@ -87,5 +86,13 @@ public class Visite implements Serializable {
 
     public void setVisiteursId(String visiteurs_id) {
         this.visiteurs_id = visiteurs_id;
+    }
+
+    public Medecin getMedecin() {
+        return medecin;
+    }
+
+    public Visiteur getVisiteur() {
+        return visiteur;
     }
 }

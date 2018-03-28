@@ -74,7 +74,6 @@ public class VisiteursActivity extends Activity {
             @Override
             public void onClick(View v) {
                 finish();
-                buttonActualiseVisiteur.callOnClick();
             }
         });
 

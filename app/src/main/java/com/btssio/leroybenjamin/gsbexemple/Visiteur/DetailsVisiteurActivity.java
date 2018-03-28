@@ -29,6 +29,7 @@ import com.btssio.leroybenjamin.gsbexemple.Metier.visiteur.Visiteur;
 import com.btssio.leroybenjamin.gsbexemple.Metier.visiteur.VisiteurAdapter;
 import com.btssio.leroybenjamin.gsbexemple.Metier.visiteur.Visiteurs;
 import com.btssio.leroybenjamin.gsbexemple.R;
+import com.btssio.leroybenjamin.gsbexemple.Visite.CreateVisiteActivity;
 import com.btssio.leroybenjamin.gsbexemple.Visite.DetailsVisiteActivity;
 import com.btssio.leroybenjamin.gsbexemple.Visite.VisitesActivity;
 
@@ -137,24 +138,47 @@ public class DetailsVisiteurActivity extends AppCompatActivity {
                 final GsonRequest gsonRequest = new GsonRequest(visitesUrl, Visites.class, null, new Response.Listener<Visites>() {
                     @Override
                     public void onResponse(Visites visites) {
-                        ArrayList<Visite> liste = visites.getVisites();
-                        VisiteAdapter adapterVisite = new VisiteAdapter(getApplicationContext(), liste);
 
-                        ListView lvVisites = (ListView) findViewById(R.id.lv_visites);
+                        ArrayList<Visite> v = new ArrayList<Visite>();
+                        for(Visite element : visites.getVisites()){
+                            if( element.getVisiteursId().equals(monVisiteur.getId())){
+                                v.add(element);
+                            }
+                        }
+                        VisiteAdapter adapterVisite = new VisiteAdapter(getApplicationContext(), v);
                         lvVisites.setAdapter(adapterVisite);
+
                     }
                 }, new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError volleyError) {
-                        if (volleyError != null) Log.e("VisitesActivity", volleyError.getMessage());
+                        if (volleyError != null)
+                            Log.e("VisitesActivity", volleyError.getMessage());
                     }
                 });
+
                 VolleyHelper.getInstance(getApplicationContext()).addToRequestQueue(gsonRequest);
             }
         });
 
         btnActualiseVisites.callOnClick();
 
+        Button buttonRetourVisiteursDetails = (Button) findViewById(R.id.btn_returnVisiteursDetails);
+        buttonRetourVisiteursDetails.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
+        Button buttonCreateVisite  = (Button) findViewById(R.id.btn_createVisite);
+        buttonCreateVisite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), CreateVisiteActivity.class);
+                intent.putExtra("Visiteur", (Serializable)monVisiteur);
+                startActivity(intent);
+            }
+        });
     }
 }

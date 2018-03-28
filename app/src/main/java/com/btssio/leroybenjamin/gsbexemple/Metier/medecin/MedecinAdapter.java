@@ -35,9 +35,6 @@ public class MedecinAdapter extends ArrayAdapter<Medecin> {
         ImageView imageView = (ImageView) listItemView.findViewById(R.id.imgViewMedecin);
         imageView.setImageResource(R.drawable.avatar);
 
-        TextView idTextView = (TextView) listItemView.findViewById(R.id.tv_id_medecin);
-        idTextView.setText(medecinSelectionnee.getId());
-
         TextView nomTextView = (TextView) listItemView.findViewById(R.id.tv_nom_medecin);
         nomTextView.setText(medecinSelectionnee.getNom());
 

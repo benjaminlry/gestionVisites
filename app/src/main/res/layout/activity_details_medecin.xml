@@ -62,48 +62,6 @@
                     android:text=""
                     android:textSize="20sp"/>
             </LinearLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Créer une visite"
-                android:textSize="30sp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Date"
-                android:textSize="20sp"/>
-            <CalendarView
-                android:id="@+id/calendarViewVisite"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-            </CalendarView>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Motif : "
-                android:textSize="20sp"/>
-            <EditText
-                android:id="@+id/et_visiteMotif"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:textSize="20sp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Visiteur"
-                android:textSize="20sp"/>
-            <Spinner
-                android:id="@+id/spinnerVisiteurs"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-            </Spinner>
-            <Button
-                android:id="@+id/btn_insertVisite"
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                android:text="VALIDER" />
         </LinearLayout>
     </ScrollView>
 

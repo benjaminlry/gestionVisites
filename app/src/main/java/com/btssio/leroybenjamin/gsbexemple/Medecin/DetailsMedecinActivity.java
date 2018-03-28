@@ -33,11 +33,6 @@ public class DetailsMedecinActivity extends AppCompatActivity {
     RequestQueue requestQueue;
     String removeMedecinUrl = "http://192.168.210.9:82/cakephp/medecins/";
     String updateMedecinUrl = "http://192.168.210.9:82/cakephp/medecins/edit/";
-    String addVisiteUrl = "http://192.168.210.9:82/cakephp/visites/add.json";
-    CalendarView dateVisite;
-    EditText motifVisite;
-    Spinner spinnerVisiteur;
-    Button buttonCreateVisite;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -113,41 +108,5 @@ public class DetailsMedecinActivity extends AppCompatActivity {
             }
         });
 
-        buttonCreateVisite = (Button) findViewById(R.id.btn_insertVisite);
-        dateVisite = (CalendarView) findViewById(R.id.calendarViewVisite);
-        motifVisite = (EditText) findViewById(R.id.et_visiteMotif);
-        spinnerVisiteur = (Spinner) findViewById(R.id.spinnerVisiteurs);
-        requestQueue = Volley.newRequestQueue(getApplicationContext());
-
-        buttonCreateVisite.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String myDate = DateFormat.format("dd-MM-yyyy hh:mm:ss", dateVisite.getDate()).toString();
-                //System.out.println(DateFormat.format("dd-MM-yyyy hh:mm:ss", dateVisite.getDate()).toString());
-                StringRequest request = new StringRequest(Request.Method.POST, addVisiteUrl, new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        Toast.makeText(DetailsMedecinActivity.this, "Nouvelle visite a été créer", Toast.LENGTH_LONG).show();
-                        finish();
-                    }
-                }, new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-
-                    }
-                }) {
-                    @Override
-                    protected Map<String, String> getParams() throws AuthFailureError {
-                        Map<String,String> parameters = new HashMap<String,String>();
-                        parameters.put("date", "2018-02-28 16:13:00");
-                        parameters.put("motif", motifVisite.getText().toString());
-                        parameters.put("medecins_id", monMedecin.getId());
-                        parameters.put("visiteurs_id", "2");
-                        return parameters;
-                    }
-                };
-                requestQueue.add(request);
-            }
-        });
     }
 }

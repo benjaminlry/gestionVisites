@@ -85,6 +85,14 @@ public class MedecinsActivity extends Activity {
             }
         });
 
+        Button buttonRetourMedecins = (Button) findViewById(R.id.btn_returnMedecins);
+        buttonRetourMedecins.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
         buttonActualiseMedecin.callOnClick();
     }
 }

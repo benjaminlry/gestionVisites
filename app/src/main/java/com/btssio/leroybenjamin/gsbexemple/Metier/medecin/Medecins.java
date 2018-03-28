@@ -13,7 +13,7 @@ public class Medecins {
         return medecins;
     }
 
-    public ArrayList<HashMap<String, String>> getVisiteursArray(){
+    public ArrayList<HashMap<String, String>> getMedecinsArray(){
         ArrayList<HashMap<String, String>> liste = new ArrayList<HashMap<String, String>>();
         for(Medecin medecin : getMedecins()){
             liste.add(medecin.getMedecin());

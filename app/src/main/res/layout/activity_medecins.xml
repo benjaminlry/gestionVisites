@@ -7,17 +7,24 @@
     android:orientation="vertical"
     tools:context="com.btssio.leroybenjamin.gsbexemple.Medecin.MedecinsActivity">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Liste des Medecins"
-        android:textSize="35sp"/>
 
-    <Button
-        android:id="@+id/btn_actualiseMedecin"
-        android:layout_height="wrap_content"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:text="Actualiser" />
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_actualiseMedecin"
+            android:layout_width = "70dp"
+            android:layout_height= "70dp"
+            android:background="@drawable/actualiser" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Liste des Medecins"
+            android:textSize="35dp"/>
+    </LinearLayout>
 
     <Button
         android:id="@+id/btn_createMedecin"
@@ -27,9 +34,14 @@
 
     <ListView
         android:id="@+id/lv_medecins"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
     </ListView>
+
+    <Button
+        android:id="@+id/btn_returnMedecins"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="Retour" />
 
 </LinearLayout>

@@ -38,7 +38,7 @@ public class VisiteAdapter extends ArrayAdapter<Visite> {
         idTextView.setText(visiteSelectionnee.getId());
 
         TextView medecinTextView = (TextView) listItemView.findViewById(R.id.tv_medecin_visite);
-        medecinTextView.setText(visiteSelectionnee.getMedecinsId());
+        medecinTextView.setText(visiteSelectionnee.getMedecin().getPrenom() + " " + visiteSelectionnee.getMedecin().getNom());
 
 
         return listItemView;

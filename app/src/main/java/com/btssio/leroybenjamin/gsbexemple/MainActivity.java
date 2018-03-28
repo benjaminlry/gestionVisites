@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
         TextView textViewVisiteurs = (TextView) findViewById(R.id.tv_visiteurs);
         TextView textViewMedecins = (TextView) findViewById(R.id.tv_medecins);
-        TextView textViewVisites = (TextView) findViewById(R.id.tv_visites);
+        //TextView textViewVisites = (TextView) findViewById(R.id.tv_visites);
 
         textViewVisiteurs.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,12 +38,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        textViewVisites.setOnClickListener(new View.OnClickListener() {
+        /*textViewVisites.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), VisitesActivity.class);
                 startActivity(intent);
             }
-        });
+        });*/
     }
 }
