@@ -46,6 +46,7 @@ public class DetailsVisiteurActivity extends AppCompatActivity {
     ListView lvVisites;
     Button btnActualiseVisites;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
